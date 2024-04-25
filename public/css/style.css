@@ -1,0 +1,59 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* Custom button styles */
+.btn-custom {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Styling for form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+/* Spacing and padding for forms */
+.form-container {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header, .footer {
+        text-align: center;
+    }
+}

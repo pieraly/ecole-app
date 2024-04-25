@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de bord - École</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center header">Tableau de Bord du Professeur</h1>
+        <p class="text-center">Bienvenue, <%= user.nom %>!</p>
+        
+        <div class="mt-4">
+            <h2>Ajouter un élève</h2>
+            <form action="/eleve" method="POST" class="mb-3">
+                <input type="text" class="form-control mb-2" placeholder="Nom de l'élève" name="nom_eleve" required>
+                <input type="text" class="form-control mb-2" placeholder="Classe de l'élève" name="classe_eleve" required>
+                <button type="submit" class="btn btn-primary">Ajouter Élève</button>
+            </form>
+
+            <h2>Ajouter une note</h2>
+            <form action="/note" method="POST" class="mb-3">
+                <input type="number" class="form-control mb-2" placeholder="ID de l'élève" name="eleve_id" required>
+                <input type="text" class="form-control mb-2" placeholder="Matière" name="matiere" required>
+                <input type="number" class="form-control mb-2" placeholder="Note" name="note" step="0.01" required>
+                <button type="submit" class="btn btn-success">Ajouter Note</button>
+            </form>
+            
+            <h2>Consulter les données</h2>
+            <a href="/donnees" class="btn btn-info">Voir les élèves et notes</a>
+        </div>
+
+        <div class="mt-4">
+            <a href="/logout" class="btn btn-danger">Déconnexion</a>
+        </div>
+    </div>
+</body>
+</html>

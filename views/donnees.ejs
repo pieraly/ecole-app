@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Données des élèves</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center header">Données des Élèves</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom de l'élève</th>
+                    <th>Classe</th>
+                    <th>Matière</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% eleves.forEach(function(eleve) { %>
+                    <tr>
+                        <td><%= eleve.eleve_nom %></td>
+                        <td><%= eleve.classe %></td>
+                        <td><%= eleve.matiere %></td>
+                        <td><%= eleve.note %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <a href="/dashboard" class="btn btn-primary">Retour au tableau de bord</a>
+    </div>
+</body>
+</html>
