@@ -9,17 +9,26 @@
 <body>
     <div class="container mt-5">
         <h2 class="text-center header">Connexion Professeur</h2>
-        <form action="/login" method="POST" class="form-container">
+        <div class="form-container">
+            <form action="/login" method="POST" class="mb-4">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Connexion</button>
+            </form>
+            <!-- Bouton de connexion Google -->
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <a href="/auth/google" class="btn btn-danger w-100">Connexion avec Google</a>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Mot de passe</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+            <div class="text-center">
+                <p>Pas encore inscrit? <a href="/register">Inscrivez-vous ici</a>.</p>
             </div>
-            <button type="submit" class="btn btn-primary">Connexion</button>
-        </form>
+        </div>
     </div>
 </body>
 </html>

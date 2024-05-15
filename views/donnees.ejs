@@ -7,29 +7,36 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center header">Données des Élèves</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nom de l'élève</th>
-                    <th>Classe</th>
-                    <th>Matière</th>
-                    <th>Note</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% eleves.forEach(function(eleve) { %>
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Données des Élèves</h1>
+            <p class="lead">Consultez ici les performances et informations des élèves.</p>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="thead-dark">
                     <tr>
-                        <td><%= eleve.eleve_nom %></td>
-                        <td><%= eleve.classe %></td>
-                        <td><%= eleve.matiere %></td>
-                        <td><%= eleve.note %></td>
+                        <th scope="col">Nom de l'élève</th>
+                        <th scope="col">Classe</th>
+                        <th scope="col">Matière</th>
+                        <th scope="col">Note</th>
                     </tr>
-                <% }); %>
-            </tbody>
-        </table>
-        <a href="/dashboard" class="btn btn-primary">Retour au tableau de bord</a>
+                </thead>
+                <tbody>
+                    <% eleves.forEach(function(eleve) { %>
+                        <tr>
+                            <td><%= eleve.eleve_nom %></td>
+                            <td><%= eleve.classe %></td>
+                            <td><%= eleve.matiere %></td>
+                            <td><%= eleve.note %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <a href="/dashboard" class="btn btn-outline-primary">Retour au tableau de bord</a>
+        </div>
     </div>
 </body>
 </html>
